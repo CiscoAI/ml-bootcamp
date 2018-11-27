@@ -1,7 +1,7 @@
 # Welcome to the Cisco ML-BootCamp Pilot
 
 ## Setup
-The following is the schematic of the overall setup.
+The following are the setup steps required.
 
 ### Step 0. Prerequisites
 The following are the prerequisites:
@@ -21,7 +21,7 @@ Make sure you can ping the k8s servers with the following IPs:
     - 48x CPU cores, 460 GB memory, 4x [GTX1080](https://www.nvidia.com/en-in/geforce/products/10series/geforce-gtx-1080/) GPUs
 
 You can also try to ```ssh``` but you are not expected to have any valid accounts on
-these machines. As already mentioned __you are not expected to access these
+these machines. As already mentioned, __you are not expected to access these
 servers directly__.
 
 ### Step 2. Verify your kubernetes account
@@ -34,6 +34,16 @@ following commands:
 [XXX]
 kubectl foo bar blah...
 ```
+
+### Step 3. Make sure the KFLab repo is accessible
+Ensure that the [MNIST example in the KFLab
+repo](https://github.com/CiscoAI/KFLab/tree/master/tf-mnist) is accessible. Read
+through the README.md in that repo so that you understand how the application is
+structured.
+
+__NOTE__: The example code is for running on GKE. Should not matter much since
+all you need is a k8s cluster but it is important to note that the bootcamp will
+be running on an in-house k8s cluster.
 
 ## Admin
 This section is for the administrators of the bootcamp only. Information here is
