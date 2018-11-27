@@ -1,5 +1,8 @@
 # Welcome to the Cisco ML-BootCamp Pilot
 
+[Setup](#setup)
+[Admin](#admin)
+
 ## Setup
 The following are the setup steps required.
 
