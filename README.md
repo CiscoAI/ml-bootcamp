@@ -1,6 +1,7 @@
 # Welcome to the Cisco ML-BootCamp Pilot
 
 - [Setup](#setup)
+- [Learning](#learning)
 - [Admin](#admin-lock)
 
 ## Setup
@@ -47,6 +48,14 @@ structured.
 __NOTE__: The example code is for running on GKE. Should not matter much since
 all you need is a k8s cluster but it is important to note that the bootcamp will
 be running on an in-house k8s cluster.
+
+## Learning
+
+### Kubernetes
+
+### Kubeflow
+An overview of Kubeflow can be found at the [official Kubeflow documentation](http://kubeflow.org/).
+Here are [the slides from the presentation](./ml-bootcamp-kubeflow.pdf).
 
 ## Admin :lock:
 This section is for the administrators of the bootcamp only. Information here is
