@@ -55,7 +55,7 @@ be running on an in-house k8s cluster.
 
 ### Kubeflow
 An overview of Kubeflow can be found at the [official Kubeflow documentation](http://kubeflow.org/).
-Here are [the slides from the presentation](./ml-bootcamp-kubeflow.pdf).
+Here are [the slides from the presentation](./ml_bootcamp_kubeflow.pdf).
 
 ## Admin :lock:
 This section is for the administrators of the bootcamp only. Information here is
