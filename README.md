@@ -45,7 +45,7 @@ __NOTE__: The example code is for running on GKE. Should not matter much since
 all you need is a k8s cluster but it is important to note that the bootcamp will
 be running on an in-house k8s cluster.
 
-## Admin
+## Admin :lock:
 This section is for the administrators of the bootcamp only. Information here is
 not relevant to others and links from here will usually not be available to
 anyone but administrators.
