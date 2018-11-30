@@ -13,33 +13,34 @@ The following are the prerequisites:
 1. Have completed the __Pre-Boot Camp Learning__ as suggested to you.
 2. Have a __Cisco provided Mac laptop__ with all recommended software, especially __VPN__.
 You will be primarily working on your laptops
-and connecting to a [kubernetes (k8s)](https://kubernetes.io/) cluster. In
-general, bootcamp participants will not need to access the k8s cluster directly.
+and connecting to a [kubernetes (k8s)](https://kubernetes.io/) cluster runnin on
+[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/).
+3. Have a gmail address.
 
-### Step 1. Verify server is reachable
-Make sure you can ping the k8s servers with the following IPs:
+### Step 1. Verify that you can access GKE
 
-- __SERVER1__: ```172.22.136.11``` (usually running as k8s slave)
-    - 48x CPU cores, 512 GB memory, 2x GTX1080 and 2x [V100](https://www.nvidia.com/en-us/data-center/tesla-v100/) GPUs
-- __SERVER2__: ```172.22.136.13``` (usually running as k8s master)
-    - 48x CPU cores, 460 GB memory, 4x [GTX1080](https://www.nvidia.com/en-in/geforce/products/10series/geforce-gtx-1080/) GPUs
-
-You can also try to ```ssh``` but you are not expected to have any valid accounts on
-these machines. As already mentioned, __you are not expected to access these
-servers directly__.
-
-### Step 2. Verify your kubernetes account
-[XXX] Each team will have __ONE__ account.
-Your account configurations will be provided to you separately.
-Each team should expect the following credentials related to their account.
-Using these credentials, verify that the accounts are accessible by running the
-following commands:
+1. Each team will be given a service account.
+2. Install [gcloud](https://cloud.google.com/sdk/docs/quickstart-macos) on your
+   macbooks.
+3. Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on
+   your macbooks.
+4. Activate service account (```service-acc-name``` and ```json-file-name``` will be
+   provided)
 ```
-[XXX]
-kubectl foo bar blah...
+gcloud auth activate-service-account <service-acc-name> --key-file=<json-file-name> --project=ml-bootcamp-2018
+```
+5. Get kubeconfig for your cluster (```cluster-name``` and ```zone-name``` will
+   be provided)
+```
+gcloud container clusters get-credentials <cluster-name> --zone <zone-name>
+```
+6. Enable admin cluster role binding (```your-user-cluster-admin-binding`` was
+   retrieved in the previous step)
+```
+kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=<service-acc-name>
 ```
 
-### Step 3. Make sure the KFLab repo is accessible
+### Step 2. Make sure the KFLab repo is accessible
 Ensure that the [MNIST example in the KFLab
 repo](https://github.com/CiscoAI/KFLab/tree/master/tf-mnist) is accessible. Read
 through the README.md in that repo so that you understand how the application is
