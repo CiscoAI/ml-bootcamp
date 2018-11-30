@@ -34,7 +34,7 @@ gcloud auth activate-service-account <service-acc-name> --key-file=<json-file-na
 ```
 gcloud container clusters get-credentials <cluster-name> --zone <zone-name>
 ```
-6. Enable admin cluster role binding (```your-user-cluster-admin-binding`` was
+6. Enable admin cluster role binding (```your-user-cluster-admin-binding``` was
    retrieved in the previous step)
 ```
 kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=<service-acc-name>
