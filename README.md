@@ -53,7 +53,8 @@ be running on an in-house k8s cluster.
 ## Learning
 
 - Kubernetes. A nice overview can be found at
-  https://jvns.ca/blog/2017/06/04/learning-about-kubernetes/.
+  https://jvns.ca/blog/2017/06/04/learning-about-kubernetes/. Here are
+  [the slides from the presentation](./brief_intro_to_k8s.pdf).
 
 - Kubeflow. An overview of Kubeflow can be found at the [official Kubeflow documentation](http://kubeflow.org/).
 Here are [the slides from the presentation](./ml_bootcamp_kubeflow.pdf).
