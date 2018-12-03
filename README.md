@@ -56,10 +56,6 @@ repo](https://github.com/CiscoAI/KFLab/tree/master/tf-mnist) is accessible. Read
 through the README.md in that repo so that you understand how the application is
 structured.
 
-__NOTE__: The example code is for running on GKE. Should not matter much since
-all you need is a k8s cluster but it is important to note that the bootcamp will
-be running on an in-house k8s cluster.
-
 ## Learning
 
 - Kubernetes. A nice overview can be found at
