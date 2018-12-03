@@ -42,7 +42,7 @@ Example (uses team-blr-1):
 gcloud container clusters get-credentials team-blr-1 --zone asia-south1-c
 ```
 6. Enable admin cluster role binding (```your-user-cluster-admin-binding``` was
-   retrieved in the previous step)
+   retrieved in the previous step) (only 1 team member should run the below command)
 ```
 kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=<service-acc-name>
 
