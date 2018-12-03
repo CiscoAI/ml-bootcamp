@@ -28,16 +28,26 @@ and connecting to a [kubernetes (k8s)](https://kubernetes.io/) cluster runnin on
    provided)
 ```
 gcloud auth activate-service-account <service-acc-name> --key-file=<json-file-name> --project=ml-bootcamp-2018
+
+Example (uses team-blr-1):
+gcloud auth activate-service-account team-blr-1@ml-bootcamp-2018.iam.gserviceaccount.com --key-file=ml-bootcamp-2018-409e6b4a7257.json --project=ml-bootcamp-2018
+
 ```
 5. Get kubeconfig for your cluster (```cluster-name``` and ```zone-name``` will
    be provided)
 ```
 gcloud container clusters get-credentials <cluster-name> --zone <zone-name>
+
+Example (uses team-blr-1):
+gcloud container clusters get-credentials team-blr-1 --zone asia-south1-c
 ```
 6. Enable admin cluster role binding (```your-user-cluster-admin-binding``` was
    retrieved in the previous step)
 ```
 kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=<service-acc-name>
+
+Example (uses team-blr-1):
+kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=team-blr-1@ml-bootcamp-2018.iam.gserviceaccount.com
 ```
 
 ### Step 2. Make sure the KFLab repo is accessible
