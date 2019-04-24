@@ -3,15 +3,21 @@
 set -x         # prints out whatever it is executing
 set -o nounset # does not allow unset variables to be used
 
-ARGS=1        # Number of arguments expected.
+ARGS=4        # Number of arguments expected.
 E_BADARGS=65  # Exit value if incorrect number of args passed.
 
-test $# -ne $ARGS && echo -e "\033[1mUsage: $0 [username]\033[0m" && exit $E_BADARGS
+test $# -ne $ARGS && \
+    echo -e "\033[1mUsage: $0 [username] [num-nodes] [zone] [machine-type]\033[0m" && \
+    echo -e "\033[1mexample: $0 amisaha 3 asia-south1-c n1-standard-2\033[0m" && \
+    exit $E_BADARGS
 
 sa_name=$1
-num_nodes=3
-zone="asia-south1-c"
-machine_type="n1-standard-1"
+#num_nodes=3
+#zone="asia-south1-c"
+#machine_type="n1-standard-2"
+num_nodes=$2
+zone=$3
+machine_type=$4
 
 # Get the location of the script no matter where you ran it from
 SCRIPT_PATH=$(cd `dirname ${0}`; pwd)
